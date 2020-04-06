@@ -21,6 +21,8 @@
 
 @property (nonatomic, strong) UIWebView *webView;
 
+@property (nonatomic, strong) UIView *lensView;
+
 
 @end
 
@@ -29,6 +31,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.lensView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [self.view addSubview:self.lensView];
     
     self.view.backgroundColor=[UIColor redColor];
     
@@ -174,7 +179,7 @@
     self.videoPreviewLayer=[AVCaptureVideoPreviewLayer layerWithSession:self.capture];
     self.videoPreviewLayer.frame = self.view.bounds;
     [self.videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-    [self.view.layer addSublayer:self.videoPreviewLayer];
+    [self.lensView.layer addSublayer:self.videoPreviewLayer];
     
     
     
@@ -242,7 +247,15 @@
 -(void)didTapCameraButton {
     
     //take picture
+    //put buttons on different view so when taking screenshot only take of the camera+webview container view
     
+    
+    UIImage * image = [self imageWithView:self.lensView];
+    
+    [UIImagePNGRepresentation(image) writeToFile:[NSString stringWithFormat:@"/Users/marcovanossi/Downloads/test-aaa.png"] atomically:YES];
+    
+    
+    //share on snapkit
 }
 
 -(void)loadLens {
@@ -257,6 +270,22 @@
     
     
     self.webView.delegate=self;
-    [self.view addSubview:self.webView];
+    [self.lensView addSubview:self.webView];
+}
+
+
+
+- (UIImage *)imageWithView:(UIView *)view
+{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0);
+    //[view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+    
+    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return img;
 }
 @end
