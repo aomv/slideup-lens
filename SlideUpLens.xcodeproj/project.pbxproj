@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBACBC9F243ACC9400662D15 /* lens-camera-change-button.png in Resources */ = {isa = PBXBuildFile; fileRef = EBACBC9C243ACC9400662D15 /* lens-camera-change-button.png */; };
+		EBACBCA0243ACC9400662D15 /* lens-camera-button.png in Resources */ = {isa = PBXBuildFile; fileRef = EBACBC9D243ACC9400662D15 /* lens-camera-button.png */; };
+		EBACBCA1243ACC9400662D15 /* lens-close-button.png in Resources */ = {isa = PBXBuildFile; fileRef = EBACBC9E243ACC9400662D15 /* lens-close-button.png */; };
 		EBCD6257243AA7B100949CD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD6256243AA7B100949CD1 /* AppDelegate.m */; };
 		EBCD625A243AA7B100949CD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD6259243AA7B100949CD1 /* ViewController.m */; };
 		EBCD625D243AA7B100949CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBCD625B243AA7B100949CD1 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EBACBC9C243ACC9400662D15 /* lens-camera-change-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lens-camera-change-button.png"; sourceTree = "<group>"; };
+		EBACBC9D243ACC9400662D15 /* lens-camera-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lens-camera-button.png"; sourceTree = "<group>"; };
+		EBACBC9E243ACC9400662D15 /* lens-close-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lens-close-button.png"; sourceTree = "<group>"; };
 		EBCD6252243AA7B100949CD1 /* SlideUpLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideUpLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCD6255243AA7B100949CD1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EBCD6256243AA7B100949CD1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +111,9 @@
 				EBCD6256243AA7B100949CD1 /* AppDelegate.m */,
 				EBCD6258243AA7B100949CD1 /* ViewController.h */,
 				EBCD6259243AA7B100949CD1 /* ViewController.m */,
+				EBACBC9D243ACC9400662D15 /* lens-camera-button.png */,
+				EBACBC9C243ACC9400662D15 /* lens-camera-change-button.png */,
+				EBACBC9E243ACC9400662D15 /* lens-close-button.png */,
 				EBCD625B243AA7B100949CD1 /* Main.storyboard */,
 				EBCD625E243AA7B400949CD1 /* Assets.xcassets */,
 				EBCD6260243AA7B400949CD1 /* LaunchScreen.storyboard */,
@@ -235,6 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBACBCA1243ACC9400662D15 /* lens-close-button.png in Resources */,
+				EBACBCA0243ACC9400662D15 /* lens-camera-button.png in Resources */,
+				EBACBC9F243ACC9400662D15 /* lens-camera-change-button.png in Resources */,
 				EBCD6262243AA7B400949CD1 /* LaunchScreen.storyboard in Resources */,
 				EBCD625F243AA7B400949CD1 /* Assets.xcassets in Resources */,
 				EBCD625D243AA7B100949CD1 /* Main.storyboard in Resources */,
@@ -438,6 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RWB95ATHQA;
 				INFOPLIST_FILE = SlideUpLens/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RWB95ATHQA;
 				INFOPLIST_FILE = SlideUpLens/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
